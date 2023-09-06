@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import ProductList from './ProductList';
 import Sort from './Sort';
+import SearchFilter from './SearchFilter';
 const Product = () => {
   return (
     <>
@@ -9,6 +10,7 @@ const Product = () => {
         <div className="leftContainer">
           <div className="filterContainer">
             <Sort/> 
+            <SearchFilter/>
           </div>
         </div>
         <div className="rightContainer">
@@ -31,6 +33,15 @@ const Wrapper = styled.div`
   flex-direction: column;
   margin-top: 4rem;
   .leftContainer{
+    width: 100%;
+    padding: 1vw 5vw;
+
+    .filterContainer{
+      width: 100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
   }
   .rightContainer{
     width: 100%;

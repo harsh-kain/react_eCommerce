@@ -46,6 +46,12 @@ const Wrapper = styled.div`
             width: 130px;
         }
     }
+    @media screen and (max-width: 500px) {
+        select{
+            font-size: 3vw;
+            width: 130px;
+        }
+    }
     
 `
 
