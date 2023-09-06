@@ -3,8 +3,8 @@ import styled from 'styled-components'
 const Home = () => {
   return (
     <Container>
-      <video autoPlay loop controls>
-        <source src="./images/video1.webm"/>
+      <video autoPlay loop>
+        <source src="./images/video 2.mp4"/>
       </video>
       {/* <h1>kain</h1> */}
     </Container>
@@ -17,15 +17,15 @@ const Container = styled.section`
     width: 100%;
     height: 100vh;
     background-color: black;
-    margin-top: 65px;
     video{
+      z-index: 1000;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
     @media screen and (max-width: 1400px) {
-      height: 90vh;
+      height: 100vh;
     }
     @media screen and (max-width: 1000px) {
       height: 70vh;

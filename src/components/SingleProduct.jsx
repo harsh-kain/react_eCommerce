@@ -79,7 +79,7 @@ const SingleProduct = () => {
           <p>Available : <span style={{fontWeight:'bolder'}}> {stock > 0 ? 'In Stock' : 'Out of Stock'} </span></p>
 
           <CartAmountToggle amount={amount} setIncrease={setIncrease} setDecrease={setDecrease}/>
-          <NavLink to='/cart'>
+          <NavLink to='/cart' onClick={() => addToCart(id,amount)}>
             <button>Add To Cart</button>  
            </NavLink>
           

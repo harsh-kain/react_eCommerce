@@ -6,6 +6,7 @@ const Navbar = () => {
 
     const [burgerStatus , setBurgerStatus] = useState(false);
     const [iconStatus , setIconStatus] = useState(false);
+
   return (
     <>
         <Container>
@@ -16,18 +17,21 @@ const Navbar = () => {
             <i className={iconStatus ? 'las la-times close ' : 'las la-times close hidden'} onClick={()=> {setBurgerStatus(false),setIconStatus(false)}}></i>
             <Right>
                 
-                <NavLink className="link" to="/">Home</NavLink>
-                <NavLink className="link" to="/about">About</NavLink>
-                <NavLink className="link" to="/contact">Contact</NavLink>
-                <NavLink className="link" to="/product">Product</NavLink>  
+                <NavLink className="link" to="/">Home <i class="las la-home"></i></NavLink>
+                <NavLink className="link" to="/product">Product <i class="lab la-dropbox"></i></NavLink>  
+                <NavLink className="link" to="/about">About <i class="las la-user-tie"></i></NavLink>
+                <NavLink className="link" to="/contact">Contact <i class="las la-headset"></i></NavLink>
+                <NavLink className="link" to="/cart">Cart <i class="las la-shopping-cart"></i></NavLink>
+
             </Right>
         </Container>
         <MobileNav className={burgerStatus ? '' : 'showNav'}>
             
-            <NavLink className="link" to="/">Home</NavLink>
-            <NavLink className="link" to="/about">About</NavLink>
-            <NavLink className="link" to="/contact">Contact</NavLink>
-            <NavLink className="link" to="/product">Product</NavLink>  
+            <NavLink className="link" to="/"> <i class="las la-home"></i> &nbsp; Home </NavLink>
+            <NavLink className="link" to="/product"><i class="lab la-dropbox"></i> &nbsp; Product  </NavLink>  
+            <NavLink className="link" to="/about"><i class="las la-user-tie"></i> &nbsp; About  </NavLink>
+            <NavLink className="link" to="/contact"> <i class="las la-headset"></i> &nbsp;Contact  </NavLink>
+            <NavLink className="link" to="/cart"><i class="las la-shopping-cart"></i> &nbsp; Cart  </NavLink>
         </MobileNav>
     </>
   )
@@ -38,18 +42,12 @@ export default Navbar;
 const Container = styled.nav`
     
     width: 100%;
-    height: 50px;
-    /* background: rgba( 255, 255, 255, 0.75 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 5.5px );
-    -webkit-backdrop-filter: blur( 5.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+    background-color: #000000;
     position: fixed;
     top: 0;
     z-index: 999;
     display: flex;
-    padding: var(--paddingMedium) var(--paddingLarge);
+    padding: 1rem 2rem;
     justify-content: space-between;
     align-items: center;
     .bars,.close{
@@ -59,14 +57,14 @@ const Container = styled.nav`
         padding: var(--paddingSmall) var(--paddingMedium);
         .bars{
             display: block;
-            color: black;
+            color: #ffffff;
             position: absolute;
             right: 20px;
             font-size: var(--fontMedium);
         }
         .close{
             display: block;
-            color: #000000;
+            color: #ffffff;
             position: absolute;
             right: 20px;
             font-size: var(--fontMedium);
@@ -77,7 +75,7 @@ const Container = styled.nav`
 `
 const Left = styled.div`
     h1{
-        color: black;
+        color: white;
         font-size: var(--fontMedium);
         font-family: var(--fontOne);
     }
@@ -103,7 +101,7 @@ const Right = styled.div`
     
     .link{
         font-size: var(--fontSmall);
-        color: #000000;
+        color: #ffffff;
         font-family: var(--fontOne);
         font-weight: 600;
         padding: var(--paddingExtraSmall);
@@ -148,12 +146,11 @@ const MobileNav = styled.div`
         color: #ffffff;
         font-family: var(--fontOne);
         font-weight: 600;
-        padding: 3rem 0rem;
+        padding: 2rem 0rem;
         transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) ;
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        flex-direction: column;
         /* width: 100%; */
     }
     .link:hover{
