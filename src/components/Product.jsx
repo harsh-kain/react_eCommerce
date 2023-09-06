@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components';
 import ProductList from './ProductList';
+import Sort from './Sort';
 const Product = () => {
   return (
     <>
       <Wrapper>
         <div className="leftContainer">
           <div className="filterContainer">
-            <h1>kain</h1>
+            <Sort/> 
           </div>
         </div>
         <div className="rightContainer">
@@ -27,13 +28,12 @@ const Wrapper = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
+  flex-direction: column;
   margin-top: 4rem;
   .leftContainer{
-    background-color: green;
-    width:20%;
   }
   .rightContainer{
-    width: 80%;
+    width: 100%;
     height: auto;
     display:flex;
     justify-content:center;

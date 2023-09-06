@@ -30,5 +30,4 @@ const Wrapper = styled.div`
     align-items:center;
     flex-wrap: wrap;
   }
-  /* background-color: rebeccapurple; */
 `
