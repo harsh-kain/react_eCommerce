@@ -49,7 +49,7 @@ const Container = styled.div`
         padding: var(--paddingMedium);
         margin: 2rem;
         border-radius: 10px;
-        background-color: #dddedf;
+        background-color: #95BDFF;
         text-align: center;
     }
     .box1,.box4{
@@ -63,11 +63,12 @@ const Container = styled.div`
 
     .box1 i,.box2 i,.box3 i,.box4 i{
         font-size: var(--fontLarge);
-        background-color: #a3a3a3;
+        background-color: #4477CE;
         border-radius: 50%;
         padding: var(--paddingSmall);
         margin: var(--marginSmall);
-        color: var(--black);
+        color: white;
+        
 
     }
     .box1 p,.box2 p,.box3 p,.box4 p{

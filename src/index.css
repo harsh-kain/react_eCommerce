@@ -9,7 +9,8 @@
 :root{
     --white : #fff;
     --black : #000;
-
+    --primaryColor : #95BDFF;
+    
     --fontExtraSmall : 18px;
     --fontSmall : 22px;
     --fontMedium : 34px;

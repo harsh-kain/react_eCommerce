@@ -8,6 +8,7 @@ import Product from './components/Product'
 import Cart from './components/Cart'
 import SingleProduct from './components/SingleProduct'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/singleproduct/:id" element={<SingleProduct/>} /> 
             <Route path="/cart" element={<Cart/>} /> 
           </Routes>
+          <Footer/>
       </BrowserRouter>
     </>
   )
